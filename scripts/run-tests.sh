@@ -26,13 +26,9 @@ set -ex
 cp -r "$INPUT_DIR" "$OUTPUT_DIR"
 phpunit-xml-cleanup "$OUTPUT_DIR"/*.xml
 
-ls -la "$INPUT_DIR"
-ls -la "$OUTPUT_DIR"
-
 if diff -ru "$EXPECTED_DIR" "$OUTPUT_DIR" > "$OUTPUT_DIR.diff" ; then
   echo "OK"
 else
   colordiff < "$OUTPUT_DIR.diff"
   exit 1
 fi
-# colordiff -ru "$EXPECTED_DIR" "$OUTPUT_DIR"
