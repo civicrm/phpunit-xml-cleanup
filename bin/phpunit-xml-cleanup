@@ -24,8 +24,8 @@ foreach ($files as $file) {
 }
 
 function isXmlEmpty($content) {
-  $xml = new SimpleXMLElement($content);
-  foreach ($xml->testsuite as $testsuite) {
+  $xmlIterator = new SimpleXMLIterator( $content);
+  for ($xmlIterator->rewind(); $xmlIterator->valid(); $xmlIterator->next()) {
     return FALSE;
   }
   return TRUE;
