@@ -1,13 +1,17 @@
 # phpunit-xml-cleanup
 
-A handful of hacky cleanup bits to get the various JUnit XML files from
-Civi's test-suites to load into Jenkins.
+The name "JUnit XML" or "xUnit XML" sounds like a well-defined file format. How handy that so many testing tools use the same format!
+
+They don't.
+
+This repository contains quick-and-dirty hacks to ensure that the various XML outputs from Civi's test suite (eg `phpunit` and `karma`)
+can be loaded consistently into Jenkins reports.
 
 ## Development
 
 * Add new example input files to `examples/input`
-* Add new exaple output files to `examples/expected`
-* To see the current command produces expected output, use:
+* Add new example output files to `examples/expected`
+* To see if the current code produces the expected output, run:
     ```
     ./scripts/run-tests.sh
     ```
