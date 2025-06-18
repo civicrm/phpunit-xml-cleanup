@@ -1,3 +1,7 @@
+___PROJECT MOVED___
+
+See: https://github.com/civicrm/civicrm-buildkit/tree/master/tools/phpunit-xml-cleanup
+
 # phpunit-xml-cleanup
 
 The name "JUnit XML" or "xUnit XML" sounds like a well-defined file format. How handy that so many testing tools use the same format!
